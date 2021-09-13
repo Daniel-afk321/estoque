@@ -14,10 +14,16 @@ namespace Exercicio4
             public double Preco;
             public int Quantidade;
 
-       
-            
+        // construtor
+        public Produto(string nome, double preco, int quantidade)
+        {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
+        }
+
         // metodo valor total do estoque
-            public double ValorTotalEmEstoque() { 
+        public double ValorTotalEmEstoque() { 
             return Preco * Quantidade;
         }
 
