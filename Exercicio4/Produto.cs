@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace Exercicio4
 {
-    class Produto
+   public class Produto
     {
         //variaveis 
             public string Nome;
             public double Preco;
             public int Quantidade;
+             
 
         // construtor
         public Produto(string nome, double preco, int quantidade)
@@ -20,11 +21,11 @@ namespace Exercicio4
             Nome = nome;
             Preco = preco;
             Quantidade = quantidade;
+          
+
         }
-        public Produto(string nome, double preco)
+        public Produto()
         {
-            Nome = nome;
-            Preco = preco;
             
         }
 

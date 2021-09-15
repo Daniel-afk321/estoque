@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace Exercicio4
 {
-    class Program
+   public class Program
     {
         static void Main(string[] args)
         {
@@ -25,13 +25,11 @@ namespace Exercicio4
             int quantidade = int.Parse(Console.ReadLine());
 
             //sobrecarga da instancia com novos parametros   
-            Produto p = new (nome, preco, quantidade);
-            _ = new Produto(nome, preco);
-
+            Produto p = new(nome, preco, quantidade);
 
 
             //dados do produto
-            Console.WriteLine("Dados do produto: " + p); 
+            Console.WriteLine("Dados do produto: " + p);
 
             //adicionar produto no estoque
             Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: "); 
