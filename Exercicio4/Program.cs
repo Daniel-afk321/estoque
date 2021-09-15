@@ -24,9 +24,12 @@ namespace Exercicio4
             Console.Write("Quantidade no estoque: ");
             int quantidade = int.Parse(Console.ReadLine());
 
-            //instanciando
-            Produto p = new Produto(nome, preco, quantidade);
-            
+            //sobrecarga da instancia com novos parametros   
+            Produto p = new (nome, preco, quantidade);
+            _ = new Produto(nome, preco);
+
+
+
             //dados do produto
             Console.WriteLine("Dados do produto: " + p); 
 

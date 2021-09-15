@@ -21,6 +21,12 @@ namespace Exercicio4
             Preco = preco;
             Quantidade = quantidade;
         }
+        public Produto(string nome, double preco)
+        {
+            Nome = nome;
+            Preco = preco;
+            
+        }
 
         // metodo valor total do estoque
         public double ValorTotalEmEstoque() { 
