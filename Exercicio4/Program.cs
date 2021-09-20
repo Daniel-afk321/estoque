@@ -33,14 +33,14 @@ namespace Exercicio4
             //adicionar produto no estoque
             Console.WriteLine("Digite o número de produtos a ser adicionado ao estoque: "); 
             int qte = int.Parse(Console.ReadLine());
-            p.AdicionarProduto(qte); 
+            p.AdicionarProdutos(qte); 
 
             Console.WriteLine("Dados do atualizados: " + p);
 
             // remover produto do estoque 
             Console.WriteLine("Digite o número de produtos a serem removidos do estoque: "); 
             qte = int.Parse(Console.ReadLine());
-            p.RemoverProduto(qte); 
+            p.RemoverProdutos(qte); 
 
             Console.WriteLine("Dados do atualizados: " + p);
         }

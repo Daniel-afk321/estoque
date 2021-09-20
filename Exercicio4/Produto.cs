@@ -10,38 +10,58 @@ namespace Exercicio4
     class Produto
     {
         //variaveis 
-            public string Nome;
-            public double Preco;
-            public int Quantidade;
+        private string _nome;
+        public double _Preco{get; private set;}
+        public double Quantidade{get; private set;}
+
+        // construtor padrao
+        public Produto()
+        {
+        }
 
         // construtor
         public Produto(string nome, double preco, int quantidade)
         {
-            Nome = nome;
-            Preco = preco;
+            _nome = nome;
+            _Preco = preco;
             Quantidade = quantidade;
         }
 
+        //Declaraçao de variavel-----Properties
+        public string Nome
+        {
+            get { return _nome; }
+            set
+            {
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
+            }
+        }
+
         // metodo valor total do estoque
-        public double ValorTotalEmEstoque() { 
-            return Preco * Quantidade;
+        public double ValorTotalEmEstoque() {
+            get {return _Preco * Quantidade; }
+            
+                
         }
 
         //metodo adicionar produto
-        public void AdicionarProduto(int quantidade) { 
+        public void AdicionarProdutos(int quantidade) { 
             Quantidade += quantidade; 
         }
 
 
         //metodo remover produto
-        public void RemoverProduto(int quantidade) { 
-            Quantidade = Quantidade - quantidade; 
+        public void RemoverProdutos(int quantidade) { 
+            Quantidade -= quantidade; 
         }
 
         public override string ToString() {
-            return Nome 
+            return _nome 
                 + ", R$ "
-                + Preco.ToString("F2", CultureInfo.InvariantCulture) 
+                + _Preco.ToString("F2", CultureInfo.InvariantCulture) 
                 + ", " 
                 + Quantidade
                 + " unidades, Total: R$ "
