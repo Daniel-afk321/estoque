@@ -44,6 +44,12 @@ namespace Exercicio4
             return _quantidade;
         }
 
+        //Utilização do GET e SET
+        public double Getpreco()
+        {
+            return _preco;
+        }
+
         //o valor total no estoque
         public double ValorTotalEmEstoque()
         {
