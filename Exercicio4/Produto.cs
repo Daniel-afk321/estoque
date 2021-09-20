@@ -9,17 +9,19 @@ namespace Exercicio4
 {
    public class Produto
     {
-        //variaveis 
+        //Declaração de variaveis 
         private string _nome;
         private double _preco;
         private int _quantidade;
-        private int Leght;
+        
 
         // construtor padrao 
         public Produto()
         {
            
         }
+
+        //construtor personalizado
         public Produto(string nome, double preco, int quantidade)
         {
             _nome = nome;
@@ -27,23 +29,26 @@ namespace Exercicio4
             _quantidade = quantidade;
         }
 
+        // parecido com Declaração de variavel  ------- properties
         public string Nome
         {
             get { return _nome; }
             set
             {
-               // if (value != null || !value Leght > 1)
-               // {
-                  //  _nome = value;
-                //}
+               if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
             }
         }
 
+        //properties
         public double Preco
         {
             get { return _preco; }
         }
 
+        //properties
         public int Quantidade
         {
             get { return _quantidade; }
