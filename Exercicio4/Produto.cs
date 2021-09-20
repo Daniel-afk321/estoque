@@ -7,43 +7,71 @@ using System.Threading.Tasks;
 
 namespace Exercicio4
 {
-    class Produto
+   public class Produto
     {
         //variaveis 
-            public string Nome;
-            public double Preco;
-            public int Quantidade;
+        private string _nome;
+        private double _preco;
+        private int _quantidade;
+        private int Leght;
 
-        // construtor
+        // construtor padrao 
+        public Produto()
+        {
+           
+        }
         public Produto(string nome, double preco, int quantidade)
         {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = quantidade;
+            _nome = nome;
+            _preco = preco;
+            _quantidade = quantidade;
+        }
+
+        public string Nome
+        {
+            get { return _nome; }
+            set
+            {
+               // if (value != null || !value Leght > 1)
+               // {
+                  //  _nome = value;
+                //}
+            }
+        }
+
+        public double Preco
+        {
+            get { return _preco; }
+        }
+
+        public int Quantidade
+        {
+            get { return _quantidade; }
         }
 
         // metodo valor total do estoque
         public double ValorTotalEmEstoque() { 
-            return Preco * Quantidade;
+            return _preco * _quantidade;
         }
 
         //metodo adicionar produto
         public void AdicionarProduto(int quantidade) { 
-            Quantidade += quantidade; 
+            _quantidade += quantidade; 
         }
 
 
         //metodo remover produto
-        public void RemoverProduto(int quantidade) { 
-            Quantidade = Quantidade - quantidade; 
+        public void RemoverProduto(int quantidade) {
+            _quantidade -= quantidade;
+                
         }
 
         public override string ToString() {
-            return Nome 
+            return  _nome 
                 + ", R$ "
-                + Preco.ToString("F2", CultureInfo.InvariantCulture) 
+                + _preco.ToString("F2", CultureInfo.InvariantCulture) 
                 + ", " 
-                + Quantidade
+                + _quantidade
                 + " unidades, Total: R$ "
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
