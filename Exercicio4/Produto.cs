@@ -39,7 +39,7 @@ namespace Exercicio4
                 }
             }
         }
-
+      
         // metodo valor total do estoque
         public double ValorTotalEmEstoque() {
             get {return _Preco * Quantidade; }
