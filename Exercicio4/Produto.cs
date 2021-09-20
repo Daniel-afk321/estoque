@@ -27,7 +27,7 @@ namespace Exercicio4
             Quantidade = quantidade;
         }
 
-        //Declaraçao de variavel-----Properties
+        // parecido com Declaração de variavel  ------- properties
         public string Nome
         {
             get { return _nome; }
