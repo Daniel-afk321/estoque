@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Exercicio4
 {
-    class Produto
+   public class Produto
     {
         //variaveis 
         private string _nome;
-        public double _Preco{get; private set;}
+        public double Preco{get; private set;}
         public double Quantidade{get; private set;}
 
         // construtor padrao
@@ -23,7 +23,7 @@ namespace Exercicio4
         public Produto(string nome, double preco, int quantidade)
         {
             _nome = nome;
-            _Preco = preco;
+            Preco = preco;
             Quantidade = quantidade;
         }
 
@@ -43,7 +43,7 @@ namespace Exercicio4
         // metodo valor total do estoque
         public double ValorTotalEmEstoque()
         {
-            get {return _Preco * Quantidade; }
+            get {return Preco * Quantidade;}
             
                 
         }
@@ -62,9 +62,9 @@ namespace Exercicio4
         public override string ToString() {
             return _nome 
                 + ", R$ "
-                + _Preco.ToString("F2", CultureInfo.InvariantCulture) 
+                + Preco.ToString("F2", CultureInfo.InvariantCulture) 
                 + ", " 
-                + Quantidade
+                +  Quantidade 
                 + " unidades, Total: R$ "
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
